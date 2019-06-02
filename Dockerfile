@@ -5,7 +5,7 @@ RUN  apt update && \
      apt upgrade -y && \
      apt install -y tar wget git apt-utils unzip && \
      apt install -y openjdk-8-jdk && \
-     apt -y install build-essential python-dev python-six python-virtualenv libcurl4-nss-dev libsasl2-dev libsasl2-modules maven libapr1-dev libsvn-dev zlib1g-dev iputils-ping && \
+     apt -y install build-essential automake autoconf  python-dev python-six python-virtualenv libcurl4-nss-dev libsasl2-dev libsasl2-modules maven libapr1-dev libsvn-dev zlib1g-dev iputils-ping && \
      export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 && \
      export CLASSPATH=.:$JAVA_HOME/lib:$CLASSPATH && \
      export PATH=$JAVA_HOME/bin:$PATH 
@@ -19,6 +19,6 @@ RUN /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6
      mkdir build && \
      cd build && \
      ../configure && \
-     make -j 2 V=0 && \
-     make install && \
-     ldconfig
+     make # && \
+     #make install && \
+     #ldconfig
