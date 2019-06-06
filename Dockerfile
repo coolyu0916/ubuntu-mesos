@@ -19,5 +19,5 @@ RUN /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6
      mkdir build && \
      cd build && \
      ../configure && \
-     make # && \
+     make && \
      make install
