@@ -18,6 +18,7 @@ RUN /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6
      cd mesos-1.7.2 && \
      mkdir build && \
      cd build && \
-     ../configure && \
-     make -j4 && \
-     make install
+     ../configure
+
+  RUN make -j 4 && \
+      make install
