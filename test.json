@@ -1,4 +1,4 @@
 {
-  {"姓名":"longzhoufeng","年龄":123},
+  {"姓名":"$SourceTable$","年龄":123},
   {"姓名":"$SourceTable$","年龄":25}
 }
